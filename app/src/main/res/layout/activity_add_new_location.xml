@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="edu.stanford.cs247.stanfordmindfulnessapp.AddNewLocationActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Prompt Me At This Location"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="Name This Location:"
+        android:layout_below="@+id/textView2"
+        android:paddingTop="40dp"
+        android:id="@+id/textView3" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:hint="Enter location here"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:text="Choose micro-meditation style:"
+        android:layout_below="@+id/editText"
+        android:paddingTop="40dp"
+        android:id="@+id/textView4" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radioGroup"
+        android:layout_below="@+id/textView4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radio_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location-based Instruction"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_breathing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timed Breathing"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_classic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classic Instruction"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/imageButtonSave"
+        android:layout_below="@id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/save_button"
+        android:text="Save"
+        android:theme="@style/MyButton" />
+
+
+
+</RelativeLayout>
